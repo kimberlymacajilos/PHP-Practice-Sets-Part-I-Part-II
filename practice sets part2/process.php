@@ -26,6 +26,7 @@
      * 
      * @param $text The input text from user that is going to be tokenized.
      * @return array|false If the user did not input text, it will not be tokenized otherwise it will be tokenized.
+     * PREG_SPLIT_NO_EMPTY used to remove empty strings from the array.
      */
     function tokenization(string $text): array|false{
         $pattern = '/\W+/';
