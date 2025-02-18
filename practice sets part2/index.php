@@ -24,7 +24,7 @@
 <body>
     <h1>Word Frequency Counter</h1>
     
-    <form action="process.php" method="post">
+    <form action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="text">Paste your text here:</label><br>
         <textarea id="text" name="text" rows="10" cols="50" required><?php echo $text; ?></textarea><br><br>
         
