@@ -1,5 +1,5 @@
 <?php
-    require_once 'process.php'
+    require_once 'process.php';
 
     $stopWords = readStopWords();
     $text = readUserInput();
