@@ -8,7 +8,7 @@
      */
     function readStopWords(): array{
         $stopWords = file('stop_words_english.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-        return array_map('strtolower' $stopWords);
+        return array_map('strtolower', $stopWords);
     }
 
     /**
@@ -29,7 +29,7 @@
      */
     function tokenization(string $text): array|false{
         $pattern = '/\W+/';
-        return preg_split($pattern, strtolower($text), -1 PREG_SPLIT_NO_EMPTY);
+        return preg_split($pattern, strtolower($text), -1, PREG_SPLIT_NO_EMPTY);
     }
 
     /**
