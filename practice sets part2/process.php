@@ -58,7 +58,7 @@
      * @return $countedWords Associative array that has keys(words) and values(frequency).
      */
     function sorting(array $countedWords, string $sortOrder){
-        $sortOrder == 'ascending' ? asort($countedWords) : arsort($countedWords);
+        $sortOrder == 'asc' ? asort($countedWords) : arsort($countedWords);
         return $countedWords;
     }
 
