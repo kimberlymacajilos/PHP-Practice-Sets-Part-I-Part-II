@@ -10,4 +10,14 @@
         $stopWords = file('stop_words_english.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         return array_map('strtolower' $stopWords);
     }
+
+    /**
+     * Reads the user input from the form
+     * 
+     * @return empty string If the user did not input a text it will return an empty string.
+     */
+
+    function readUserInput(): string{
+        return ($_SERVER["REQUEST_METHOD"] == "POST" ? $_POST['text'] : '');
+    }
 ?>
